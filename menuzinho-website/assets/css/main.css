@@ -149,7 +149,8 @@ nav ul li a:hover {
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 30%;
+    border-radius: 14px;
     height: auto;
     animation: float 3s ease-in-out infinite;
 }
@@ -337,7 +338,8 @@ nav ul li a:hover {
 }
 
 .app-preview-image img {
-    max-width: 100%;
+    max-width: 30%;
+    border-radius: 14px;
     height: auto;
     border-radius: 16px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
