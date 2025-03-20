@@ -3,37 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menuzinho - Landing Page</title>
+    <title>Menuzinho | Nutrição Infantil Personalizada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+      
+    </style>
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao Menuzinho</h1>
-        <nav>
-            <ul>
-                <li><a href="#features">Recursos</a></li>
-                <li><a href="#community">Comunidade</a></li>
-                <li><a href="privacy-policy.html">Política de Privacidade</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="assets/icon.png" alt="Menuzinho Logo">
+                Menuzinho
+            </a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#app-preview">Aplicativo</a></li>
+                    <li><a href="#community">Comunidade</a></li>
+                    <li><a href="#download">Download</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="features">
-            <h2>Recursos do Menuzinho</h2>
-            <p>Descubra receitas incríveis e personalize seus planos nutricionais.</p>
-        </section>
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Nutrição infantil de forma simples e divertida</h1>
+                <p>O Menuzinho ajuda você a criar planos nutricionais personalizados para seus filhos, com receitas deliciosas e dicas para uma alimentação saudável.</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn primary">Baixar Aplicativo</a>
+                    <a href="#features" class="btn secondary">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/500x400" alt="Menuzinho App Preview">
+            </div>
+        </div>
+    </section>
 
-        <section id="community">
-            <h2>Comunidade Menuzinho</h2>
-            <p>Participe da nossa comunidade para tirar dúvidas e compartilhar experiências.</p>
-        </section>
-    </main>
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Recursos do Menuzinho</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Planos Nutricionais</h3>
+                    <p>Crie planos nutricionais personalizados para cada um dos seus filhos, baseados nas necessidades individuais.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Receitas Infantis</h3>
+                    <p>Acesse centenas de receitas saborosas e saudáveis, aprovadas por nutricionistas e amadas pelas crianças.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Comunidade de Pais</h3>
+                    <p>Conecte-se com outros pais, compartilhe dicas e tire dúvidas sobre a alimentação dos seus pequenos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lunch-box"></i>
+                    </div>
+                    <h3>Lancheira Escolar</h3>
+                    <p>Monte lancheiras equilibradas e atrativas para seus filhos levarem para a escola com opções para todos os gostos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Lembrete de Água</h3>
+                    <p>Receba lembretes personalizados para garantir que seus filhos estejam bem hidratados durante todo o dia.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-carrot"></i>
+                    </div>
+                    <h3>Receitas Vegetarianas</h3>
+                    <p>Explore nosso acervo de receitas vegetarianas nutritivas e deliciosas para toda a família.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="app-preview" class="app-preview">
+        <div class="container app-preview-container">
+            <div class="app-preview-content">
+                <h2>Torne a nutrição infantil uma experiência divertida</h2>
+                <p>O Menuzinho foi desenvolvido por pais para pais, com o objetivo de tornar a alimentação saudável das crianças mais simples e divertida.</p>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i> <span>Economize tempo planejando refeições</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Reduza o desperdício de alimentos</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Acompanhe o desenvolvimento nutricional</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Estimule hábitos alimentares saudáveis</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Descubra novas receitas que as crianças adoram</span></li>
+                </ul>
+                <a href="#download" class="btn primary">Experimentar Agora</a>
+            </div>
+            <div class="app-preview-image">
+                <img src="https://via.placeholder.com/400x600" alt="Menuzinho App Screens">
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community">
+        <div class="container community-container">
+            <h2 class="section-title">Nossa Comunidade</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p class="testimonial-content">O Menuzinho transformou a alimentação do meu filho! Ele agora adora experimentar novos alimentos e até me ajuda a preparar as receitas do aplicativo.</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/100" alt="Testimonal Author">
+                        <div class="author-info">
+                            <h4>Ana Silva</h4>
+                            <p>Mãe de Pedro, 6 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="community-grid">
+                <div class="community-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Dúvidas e Respostas">
+                    <div class="community-card-content">
+                        <h3>Dúvidas e Respostas</h3>
+                        <p>Tire suas dúvidas sobre nutrição infantil com especialistas e outros pais da comunidade.</p>
+                        <a href="#">Participar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Histórias de Sucesso">
+                    <div class="community-card-content">
+                        <h3>Histórias de Sucesso</h3>
+                        <p>Conheça as histórias de famílias que transformaram a alimentação de seus filhos com o Menuzinho.</p>
+                        <a href="#">Descobrir <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Dicas Semanais">
+                    <div class="community-card-content">
+                        <h3>Dicas Semanais</h3>
+                        <p>Receba dicas semanais para melhorar a nutrição dos seus filhos e tornar as refeições mais divertidas.</p>
+                        <a href="#">Assinar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="cta-section">
+        <div class="container">
+            <h2>Baixe o Menuzinho hoje mesmo</h2>
+            <p>Transforme a alimentação dos seus filhos e torne a nutrição infantil uma experiência divertida para toda a família.</p>
+            <div class="store-buttons">
+                <a href="#" class="store-btn">
+                    <i class="fab fa-google-play"></i>
+                    <span>
+                        <small>Disponível no</small>
+                        <strong>Google Play</strong>
+                    </span>
+                </a>
+                <a href="#" class="store-btn">
+                    <i class="fab fa-apple"></i>
+                    <span>
+                        <small>Baixe na</small>
+                        <strong>App Store</strong>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Menuzinho. Todos os direitos reservados.</p>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="assets/icon.png" alt="Menuzinho Logo">
+                    Menuzinho
+                </div>
+                <p>Transformando a nutrição infantil em uma experiência divertida para toda a família.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Planos e Preços</a></li>
+                    <li><a href="./privacy-policy.html">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> contato@menuzinho.com.br</li>
+                    <li><i class="fas fa-phone"></i> (11) 9999-9999</li>
+                    <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP - Brasil</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 Menuzinho. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu');
+        const nav = document.getElementById('nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                nav.classList.remove('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
 </body>
 </html>

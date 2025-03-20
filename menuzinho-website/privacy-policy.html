@@ -4,134 +4,735 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade | Menuzinho</title>
-    <link rel="stylesheet" href="assets/css/privacy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Cores do aplicativo */
+            --primary: #e77464;
+            --secondary: #3d7e9a;
+            --light: #ffeeb4;
+            --accent: #f8b26a;
+            --dark: #9e3a39;
+            --neutral: #f5f5f5;
+            --text-dark: #333333;
+            
+            /* Pastel colors */
+            --pastel-pink: #FFD1DC;
+            --pastel-blue: #BFDFFF;
+            --pastel-yellow: #FFFFD1;
+            --pastel-green: #D1FFD1;
+            --pastel-purple: #E6D1FF;
+            --pastel-red: #FFD1D1;
+            --pastel-gray: #D9D9D9;
+            --pastel-orange: #FFE5CC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .back-button {
+            display: flex;
+            align-items: center;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-button:hover {
+            color: var(--primary);
+        }
+
+        .back-button i {
+            margin-right: 0.5rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 60px;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .privacy-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .privacy-container {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .table-of-contents {
+            background-color: var(--neutral);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .table-of-contents h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .table-of-contents ul {
+            list-style: none;
+        }
+
+        .table-of-contents ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .table-of-contents ul li a {
+            display: flex;
+            align-items: center;
+        }
+
+        .table-of-contents ul li a:before {
+            content: "•";
+            margin-right: 0.8rem;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 100px;
+        }
+
+        .privacy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--pastel-pink);
+        }
+
+        .privacy-section h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .privacy-section p, .privacy-section ul {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .privacy-section ul {
+            padding-left: 2rem;
+        }
+
+        .privacy-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: var(--pastel-blue);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .data-table th, .data-table td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .data-table th {
+            background-color: var(--neutral);
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-option {
+            flex: 1;
+            min-width: 250px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-option i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-option h3 {
+            margin-top: 0;
+        }
+
+        .contact-option p {
+            margin-bottom: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn.primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 10px rgba(231, 116, 100, 0.3);
+        }
+
+        .btn.primary:hover {
+            background-color: #d5655a;
+            transform: translateY(-2px);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            height: 35px;
+            margin-right: 0.8rem;
+        }
+
+        .footer-about p {
+            margin-bottom: 1.5rem;
+            color: #bbb;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #3b3b3b;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-links h3::after, .footer-contact h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a {
+            color: #bbb;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: white;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            display: flex;
+            margin-bottom: 1rem;
+            color: #bbb;
+        }
+
+        .contact-info li i {
+            margin-right: 1rem;
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .privacy-container {
+                padding: 1.5rem;
+            }
+
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .privacy-section h3 {
+                font-size: 1.2rem;
+            }
+
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="index.html" class="logo">Menuzinho</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html#features">Recursos</a></li>
-                    <li><a href="index.html#community">Comunidade</a></li>
-                    <li><a href="index.html#contact">Contato</a></li>
-                </ul>
-            </nav>
+        <div class="header-container">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar para a página inicial
+            </a>
+            <a href="index.html" class="logo">
+                <img src="assets/icon.png" alt="Menuzinho Logo">
+                Menuzinho
+            </a>
         </div>
     </header>
 
-    <main class="container">
-        <article class="privacy-policy">
-            <h1>Política de Privacidade</h1>
-            <p class="last-updated">Última atualização: 20 de março de 2025</p>
+    <main class="main-content">
+        <div class="container">
+            <div class="privacy-header">
+                <h1>Política de Privacidade</h1>
+                <p>Nesta página, explicamos como o Menuzinho coleta, utiliza e protege seus dados pessoais, e quais são seus direitos em relação a essas informações.</p>
+                <span class="last-updated">Última atualização: 20 de março de 2025</span>
+            </div>
 
-            <section>
-                <h2>1. Introdução</h2>
-                <p>Bem-vindo à Política de Privacidade do Menuzinho. Nós, da equipe Menuzinho, estamos comprometidos em proteger sua privacidade e seus dados pessoais. Esta política descreve como coletamos, usamos e protegemos suas informações quando você utiliza nosso aplicativo de receitas, planos nutricionais personalizados e nossa comunidade de suporte.</p>
-                <p>Ao utilizar o Menuzinho, você concorda com as práticas descritas nesta política. Recomendamos a leitura completa deste documento.</p>
-            </section>
+            <div class="privacy-container">
+                <div class="table-of-contents">
+                    <h2>Índice</h2>
+                    <ul>
+                        <li><a href="#introduction">Introdução</a></li>
+                        <li><a href="#data-collection">Dados que coletamos</a></li>
+                        <li><a href="#data-use">Como usamos seus dados</a></li>
+                        <li><a href="#data-share">Compartilhamento de dados</a></li>
+                        <li><a href="#children">Informações sobre crianças</a></li>
+                        <li><a href="#security">Segurança de dados</a></li>
+                        <li><a href="#user-rights">Seus direitos</a></li>
+                        <li><a href="#policy-updates">Atualizações desta política</a></li>
+                        <li><a href="#contact">Como entrar em contato</a></li>
+                    </ul>
+                </div>
 
-            <section>
-                <h2>2. Informações que Coletamos</h2>
-                <p>Podemos coletar os seguintes tipos de informações:</p>
-                <ul>
-                    <li><strong>Informações de cadastro:</strong> nome, endereço de email, nome de usuário e senha.</li>
-                    <li><strong>Informações de perfil:</strong> foto, preferências alimentares, restrições dietéticas e objetivos nutricionais.</li>
-                    <li><strong>Informações de saúde:</strong> peso, altura, idade, alergias, condições médicas relacionadas à alimentação.</li>
-                    <li><strong>Dados de uso:</strong> receitas favoritas, planos nutricionais salvos, interações na comunidade.</li>
-                    <li><strong>Informações técnicas:</strong> tipo de dispositivo, sistema operacional, dados de uso do aplicativo.</li>
-                </ul>
-            </section>
+                <section id="introduction" class="privacy-section">
+                    <h2>1. Introdução</h2>
+                    <p>O Menuzinho é um aplicativo dedicado a auxiliar pais e responsáveis na criação de planos nutricionais personalizados para crianças, oferecendo receitas e facilitando o planejamento de refeições saudáveis.</p>
+                    <p>Valorizamos sua privacidade e estamos comprometidos em proteger seus dados pessoais. Esta Política de Privacidade foi elaborada para informar como coletamos, utilizamos, armazenamos e protegemos suas informações, em conformidade com a Lei Geral de Proteção de Dados (LGPD) e outras legislações aplicáveis.</p>
+                    <p>Ao utilizar o Menuzinho, você concorda com as práticas descritas nesta política. Se você não concordar com esta política, recomendamos que não utilize nosso aplicativo.</p>
+                </section>
 
-            <section>
-                <h2>3. Como Usamos Suas Informações</h2>
-                <p>Utilizamos suas informações para:</p>
-                <ul>
-                    <li>Personalizar planos nutricionais baseados em suas necessidades e preferências.</li>
-                    <li>Melhorar e otimizar nossos algoritmos de recomendação de receitas.</li>
-                    <li>Facilitar interações entre membros da comunidade.</li>
-                    <li>Responder a dúvidas e fornecer suporte técnico.</li>
-                    <li>Enviar atualizações sobre novos recursos, receitas e conteúdos relacionados (com sua permissão).</li>
-                    <li>Analisar padrões de uso para melhorar a experiência do usuário.</li>
-                    <li>Garantir a segurança de sua conta e de nossos serviços.</li>
-                </ul>
-            </section>
+                <section id="data-collection" class="privacy-section">
+                    <h2>2. Dados que coletamos</h2>
+                    <p>Para proporcionar uma experiência personalizada e adequada às necessidades nutricionais das crianças, coletamos os seguintes tipos de informações:</p>
 
-            <section>
-                <h2>4. Compartilhamento de Dados</h2>
-                <p>Não vendemos suas informações pessoais a terceiros. Podemos compartilhar dados nas seguintes situações:</p>
-                <ul>
-                    <li><strong>Provedores de serviços:</strong> empresas que nos ajudam a operar o aplicativo, como serviços de hospedagem, análise e processamento de pagamentos.</li>
-                    <li><strong>Comunidade Menuzinho:</strong> informações de perfil que você opta por tornar públicas para outros membros da comunidade.</li>
-                    <li><strong>Cumprimento legal:</strong> quando exigido por lei ou em resposta a processos legais válidos.</li>
-                    <li><strong>Proteção de direitos:</strong> quando necessário para proteger nossos direitos, propriedade ou segurança.</li>
-                </ul>
-                <p>Todos os terceiros que processam dados em nosso nome são obrigados a garantir a segurança de suas informações.</p>
-            </section>
+                    <h3>2.1. Informações que você nos fornece</h3>
+                    <ul>
+                        <li><strong>Dados de cadastro:</strong> nome, e-mail, senha e informações de perfil.</li>
+                        <li><strong>Dados das crianças:</strong> nome, idade, sexo, peso, altura, preferências alimentares, restrições alimentares e alergias.</li>
+                        <li><strong>Conteúdo gerado pelo usuário:</strong> receitas, fotos de refeições, comentários e publicações na comunidade.</li>
+                    </ul>
 
-            <section>
-                <h2>5. Segurança de Dados</h2>
-                <p>Implementamos medidas de segurança adequadas para proteger suas informações contra acesso não autorizado, alteração, divulgação ou destruição. Estas medidas incluem criptografia de dados, acesso restrito a colaboradores, e revisões regulares de nossos procedimentos de segurança.</p>
-                <p>No entanto, nenhum método de transmissão pela internet ou armazenamento eletrônico é 100% seguro, e não podemos garantir segurança absoluta.</p>
-            </section>
+                    <h3>2.2. Informações coletadas automaticamente</h3>
+                    <ul>
+                        <li><strong>Dados de uso:</strong> interações com o aplicativo, receitas visualizadas, planos nutricionais criados.</li>
+                        <li><strong>Dados do dispositivo:</strong> modelo do dispositivo, sistema operacional, identificadores únicos.</li>
+                        <li><strong>Dados de localização:</strong> localização aproximada baseada no endereço IP (se autorizado).</li>
+                    </ul>
 
-            <section>
-                <h2>6. Seus Direitos</h2>
-                <p>Você tem os seguintes direitos relacionados aos seus dados pessoais:</p>
-                <ul>
-                    <li>Acessar e receber uma cópia de seus dados pessoais.</li>
-                    <li>Corrigir dados imprecisos ou incompletos.</li>
-                    <li>Solicitar a exclusão de seus dados pessoais.</li>
-                    <li>Restringir ou opor-se ao processamento de seus dados.</li>
-                    <li>Retirar seu consentimento a qualquer momento.</li>
-                    <li>Solicitar a portabilidade de seus dados para outro serviço.</li>
-                </ul>
-                <p>Para exercer esses direitos, entre em contato conosco por meio dos canais indicados na seção "Contato".</p>
-            </section>
+                    <div class="highlight-box">
+                        <h3>Importante sobre dados de crianças</h3>
+                        <p>Coletamos informações sobre crianças somente com o consentimento explícito dos pais ou responsáveis legais. Estas informações são utilizadas exclusivamente para fornecer recomendações nutricionais adequadas à idade e necessidades específicas.</p>
+                    </div>
 
-            <section>
-                <h2>7. Retenção de Dados</h2>
-                <p>Manteremos seus dados pessoais apenas pelo tempo necessário para os fins descritos nesta política ou conforme exigido por obrigações legais. Quando não houver mais necessidade legítima para processar suas informações, excluiremos ou anonimizaremos seus dados.</p>
-            </section>
+                    <table class="data-table">
+                        <tr>
+                            <th>Tipo de dado</th>
+                            <th>Finalidade</th>
+                            <th>Base legal</th>
+                        </tr>
+                        <tr>
+                            <td>Dados de cadastro</td>
+                            <td>Autenticação, comunicação, suporte</td>
+                            <td>Execução de contrato</td>
+                        </tr>
+                        <tr>
+                            <td>Dados das crianças</td>
+                            <td>Personalização de planos nutricionais</td>
+                            <td>Consentimento dos responsáveis</td>
+                        </tr>
+                        <tr>
+                            <td>Conteúdo do usuário</td>
+                            <td>Funcionalidades da comunidade</td>
+                            <td>Execução de contrato</td>
+                        </tr>
+                        <tr>
+                            <td>Dados de uso</td>
+                            <td>Melhorias do aplicativo, personalização</td>
+                            <td>Interesse legítimo</td>
+                        </tr>
+                    </table>
+                </section>
 
-            <section>
-                <h2>8. Uso por Menores</h2>
-                <p>O Menuzinho não é direcionado a pessoas menores de 18 anos. Não coletamos intencionalmente informações pessoais de menores. Se você é pai, mãe ou responsável legal e acredita que seu filho nos forneceu informações pessoais, entre em contato conosco para que possamos tomar as medidas necessárias.</p>
-            </section>
+                <section id="data-use" class="privacy-section">
+                    <h2>3. Como usamos seus dados</h2>
+                    <p>Utilizamos as informações coletadas para:</p>
 
-            <section>
-                <h2>9. Cookies e Tecnologias Similares</h2>
-                <p>Utilizamos cookies e tecnologias similares para melhorar sua experiência, analisar o tráfego e personalizar o conteúdo. Você pode controlar o uso de cookies através das configurações do seu navegador ou dispositivo.</p>
-            </section>
+                    <ul>
+                        <li>Criar e gerenciar sua conta no Menuzinho</li>
+                        <li>Desenvolver planos nutricionais personalizados para as crianças</li>
+                        <li>Recomendar receitas e preparos adequados às necessidades e preferências</li>
+                        <li>Enviar lembretes de hidratação e outras notificações relacionadas à nutrição</li>
+                        <li>Oferecer suporte técnico e atendimento ao cliente</li>
+                        <li>Melhorar o aplicativo com base no comportamento e feedback dos usuários</li>
+                        <li>Facilitar a interação na comunidade entre os usuários</li>
+                        <li>Garantir a segurança e integridade do aplicativo</li>
+                    </ul>
 
-            <section>
-                <h2>10. Alterações nesta Política</h2>
-                <p>Podemos atualizar esta política periodicamente para refletir mudanças em nossas práticas ou por outros motivos operacionais, legais ou regulatórios. A data da última atualização será sempre indicada no início do documento. Recomendamos que você revise esta política regularmente.</p>
-            </section>
+                    <h3>3.1. Personalização</h3>
+                    <p>Utilizamos informações para personalizar sua experiência no aplicativo, incluindo:</p>
+                    <ul>
+                        <li>Sugestões de receitas baseadas nas preferências e restrições alimentares</li>
+                        <li>Planos nutricionais adaptados à idade e necessidades individuais das crianças</li>
+                        <li>Conteúdo relevante da comunidade baseado em seus interesses</li>
+                    </ul>
+                </section>
 
-            <section>
-                <h2>11. Contato</h2>
-                <p>Se você tiver dúvidas, preocupações ou solicitações relacionadas a esta política de privacidade ou ao tratamento de seus dados pessoais, entre em contato conosco:</p>
-                <address>
-                    Email: privacidade@menuzinho.com<br>
-                    Endereço: Av. Exemplo, 123 - São Paulo, SP<br>
-                    Telefone: (11) 1234-5678
-                </address>
-                <p>Responderemos a todas as solicitações dentro de um prazo razoável e de acordo com as leis aplicáveis.</p>
-            </section>
-        </article>
+                <section id="data-share" class="privacy-section">
+                    <h2>4. Compartilhamento de dados</h2>
+                    <p>O Menuzinho valoriza sua privacidade e compartilha seus dados apenas quando necessário para a operação do serviço ou quando exigido por lei.</p>
+
+                    <h3>4.1. Com quem compartilhamos</h3>
+                    <ul>
+                        <li><strong>Prestadores de serviços:</strong> empresas que nos ajudam a operar o aplicativo, como serviços de hospedagem, processamento de pagamentos e análise de dados.</li>
+                        <li><strong>Outros usuários da comunidade:</strong> informações que você opta por compartilhar no fórum da comunidade serão visíveis para outros usuários.</li>
+                        <li><strong>Autoridades competentes:</strong> quando exigido por lei, ordem judicial ou para proteger direitos e prevenir fraudes.</li>
+                    </ul>
+
+                    <h3>4.2. Transferências internacionais</h3>
+                    <p>Alguns de nossos prestadores de serviços podem estar localizados em outros países. Quando transferimos seus dados para fora do Brasil, garantimos que sejam protegidos de acordo com nossa política de privacidade e leis aplicáveis.</p>
+                </section>
+
+                <section id="children" class="privacy-section">
+                    <h2>5. Informações sobre crianças</h2>
+                    <p>O Menuzinho é um aplicativo voltado para pais e responsáveis gerenciarem a nutrição de seus filhos. Entendemos a sensibilidade dos dados infantis e adotamos medidas especiais para sua proteção.</p>
+
+                    <h3>5.1. Coleta de dados infantis</h3>
+                    <p>Coletamos informações sobre crianças apenas com o consentimento explícito dos pais ou responsáveis legais. Nunca solicitamos informações diretamente às crianças.</p>
+
+                    <h3>5.2. Uso limitado</h3>
+                    <p>As informações sobre crianças são utilizadas exclusivamente para:</p>
+                    <ul>
+                        <li>Criar planos nutricionais personalizados e adequados</li>
+                        <li>Recomendar receitas apropriadas para a idade e necessidades</li>
+                        <li>Monitorar o desenvolvimento nutricional (quando autorizado)</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h3>Compromisso com a proteção infantil</h3>
+                        <p>Não utilizamos dados de crianças para marketing direcionado, nem compartilhamos essas informações com terceiros para fins comerciais. A segurança e privacidade dos dados infantis são prioridades absolutas para nós.</p>
+                    </div>
+                </section>
+
+                <section id="security" class="privacy-section">
+                    <h2>6. Segurança de dados</h2>
+                    <p>A proteção de seus dados pessoais é fundamental para nós. Implementamos medidas de segurança técnicas e organizacionais para proteger suas informações contra acesso não autorizado, alteração, divulgação ou destruição.</p>
+
+                    <h3>6.1. Medidas de proteção</h3>
+                    <ul>
+                        <li>Criptografia de dados sensíveis</li>
+                        <li>Controles de acesso rigorosos</li>
+                        <li>Monitoramento contínuo de nossos sistemas</li>
+                        <li>Atualizações regulares de segurança</li>
+                        <li>Treinamento de nossa equipe em práticas de privacidade</li>
+                    </ul>
+
+                    <h3>6.2. Período de retenção</h3>
+                    <p>Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir as finalidades descritas nesta política, a menos que um período de retenção mais longo seja exigido por lei.</p>
+                </section>
+
+                <section id="user-rights" class="privacy-section">
+                    <h2>7. Seus direitos</h2>
+                    <p>De acordo com a Lei Geral de Proteção de Dados (LGPD) e outras leis aplicáveis, você tem diversos direitos relacionados aos seus dados pessoais:</p>
+
+                    <ul>
+                        <li><strong>Acesso:</strong> Você pode solicitar informações sobre quais dados pessoais seus e de seus filhos mantemos.</li>
+                        <li><strong>Correção:</strong> Pode solicitar a correção de dados imprecisos ou incompletos.</li>
+                        <li><strong>Exclusão:</strong> Em algumas circunstâncias, você pode solicitar a exclusão de seus dados.</li>
+                        <li><strong>Portabilidade:</strong> Você pode solicitar uma cópia de seus dados em formato estruturado.</li>
+                        <li><strong>Restrição:</strong> Pode solicitar que limitemos o processamento de seus dados.</li>
+                        <li><strong>Oposição:</strong> Você pode se opor ao processamento de seus dados em determinadas circunstâncias.</li>
+                        <li><strong>Revogação do consentimento:</strong> Quando o processamento se baseia no consentimento, você pode retirá-lo a qualquer momento.</li>
+                    </ul>
+
+                    <p>Para exercer seus direitos, entre em contato conosco pelos canais disponíveis na seção "Como entrar em contato".</p>
+                </section>
+
+                <section id="policy-updates" class="privacy-section">
+                    <h2>8. Atualizações desta política</h2>
+                    <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas ou por outros motivos operacionais, legais ou regulamentares.</p>
+                    <p>Notificaremos você sobre mudanças significativas através do aplicativo ou e-mail. Recomendamos que você revise regularmente esta política para estar ciente de como protegemos suas informações.</p>
+                    <p>A data da última atualização será sempre indicada no início desta política.</p>
+                </section>
+
+                <section id="contact" class="privacy-section">
+                    <h2>9. Como entrar em contato</h2>
+                    <p>Se você tiver dúvidas, comentários ou solicitações relacionadas a esta Política de Privacidade ou ao processamento de seus dados pessoais, entre em contato conosco:</p>
+
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <i class="fas fa-envelope"></i>
+                            <h3>E-mail</h3>
+                            <p>Para dúvidas sobre privacidade e dados pessoais</p>
+                            <a href="mailto:appmenuzinho@gmail.com" class="btn primary">appmenuzinho@gmail.com</a>
+                        </div>
+                        <div class="contact-option">
+                            <i class="fas fa-headset"></i>
+                            <h3>Suporte</h3>
+                            <p>Para questões técnicas e ajuda com o aplicativo</p>
+                            <a href="mailto:appmenuzinho@gmail.com" class="btn primary">appmenuzinho@gmail.com</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Menuzinho. Todos os direitos reservados.</p>
-            <ul class="footer-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="privacy-policy.html">Política de Privacidade</a></li>
-                <li><a href="#">Termos de Uso</a></li>
-            </ul>
-        </div>
-    </footer>
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 90,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
